@@ -4,7 +4,19 @@ class UserYearsController < ApplicationController
   # GET /user_years
   # GET /user_years.json
   def index
-    @user_years = UserYear.all
+    target_year = params["target_year"]
+    users_id = params["users_id"]
+    unless target_year.blank?
+      @user_years = UserYear.where(users_id: users_id, target_year: target_year)
+      return
+    end
+
+    unless users_id.blank?
+      @user_years = UserYear.where(users_id: users_id)
+    else
+      @user_years = UserYear.all
+    end
+
   end
 
   # GET /user_years/1

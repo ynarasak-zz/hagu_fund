@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/">はぐくみ</a>
+  <div class="collapse navbar-collapse" id="Navber">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          MENU 
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <%= link_to '会社' , {controller: :companies, action: :index} , id: :link, class: 'dropdown-item' %>
+          <%= link_to '社員' , {controller: :users, action: :index} , id: :link, class: 'dropdown-item' %>
+          <%= link_to '社員詳細' , {controller: :user_years, action: :index} , id: :link, class: 'dropdown-item' %>
+          <div class="dropdown-divider"></div>
+          <%= link_to 'システム' , {controller: :systems, action: :index} , id: :link, class: 'dropdown-item' %>
+          <%= link_to '所得税マスタ' , {controller: :income_taxes, action: :index} , id: :link, class: 'dropdown-item' %>
+          <%= link_to '健保等級マスタ' , {controller: :kenpo_grades, action: :index} , id: :link, class: 'dropdown-item' %>
+          <%= link_to '厚生年金等級マスタ' , {controller: :kosei_grades, action: :index} , id: :link, class: 'dropdown-item' %>
+        </div>
+      </li>
+    </ul>
+  </div><!-- /.navbar-collapse -->
+</nav>

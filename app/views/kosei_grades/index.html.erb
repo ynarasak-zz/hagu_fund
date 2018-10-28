@@ -2,7 +2,7 @@
 
 <h1>Kosei Grades</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Grade</th>
@@ -18,9 +18,9 @@
         <td><%= kosei_grade.grade %></td>
         <td><%= kosei_grade.lower_limit %></td>
         <td><%= kosei_grade.base_monthly_salary %></td>
-        <td><%= link_to 'Show', kosei_grade %></td>
-        <td><%= link_to 'Edit', edit_kosei_grade_path(kosei_grade) %></td>
-        <td><%= link_to 'Destroy', kosei_grade, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%# link_to 'Show', kosei_grade %></td>
+        <td><%# link_to 'Edit', edit_kosei_grade_path(kosei_grade) %></td>
+        <td><%# link_to 'Destroy', kosei_grade, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Kosei Grade', new_kosei_grade_path %>
+<%# link_to 'New Kosei Grade', new_kosei_grade_path %>

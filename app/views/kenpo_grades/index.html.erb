@@ -2,7 +2,7 @@
 
 <h1>Kenpo Grades</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Grade</th>
@@ -24,9 +24,11 @@
         <td><%= kenpo_grade.base_monthly_salary %></td>
         <td><%= kenpo_grade.decision_1_down %></td>
         <td><%= kenpo_grade.decision_2_down %></td>
-        <td><%= link_to 'Show', kenpo_grade %></td>
-        <td><%= link_to 'Edit', edit_kenpo_grade_path(kenpo_grade) %></td>
-        <td><%= link_to 'Destroy', kenpo_grade, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<%#
+        <td><%= link_to 'Show', kenpo_grade ></td>
+        <td><%= link_to 'Edit', edit_kenpo_grade_path(kenpo_grade) ></td>
+        <td><%= link_to 'Destroy', kenpo_grade, method: :delete, data: { confirm: 'Are you sure?' } ></td>
+%>
       </tr>
     <% end %>
   </tbody>
@@ -34,4 +36,4 @@
 
 <br>
 
-<%= link_to 'New Kenpo Grade', new_kenpo_grade_path %>
+<%# link_to 'New Kenpo Grade', new_kenpo_grade_path %>

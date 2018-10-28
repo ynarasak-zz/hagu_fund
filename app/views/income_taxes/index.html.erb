@@ -2,7 +2,7 @@
 
 <h1>Income Taxes</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Grade</th>
@@ -20,9 +20,9 @@
         <td><%= income_tax.over %></td>
         <td><%= income_tax.under %></td>
         <td><%= income_tax.tax %></td>
-        <td><%= link_to 'Show', income_tax %></td>
-        <td><%= link_to 'Edit', edit_income_tax_path(income_tax) %></td>
-        <td><%= link_to 'Destroy', income_tax, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%# link_to 'Show', income_tax %></td>
+        <td><%# link_to 'Edit', edit_income_tax_path(income_tax) %></td>
+        <td><%# link_to 'Destroy', income_tax, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Income Tax', new_income_tax_path %>
+<%# link_to 'New Income Tax', new_income_tax_path %>

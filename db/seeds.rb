@@ -26,7 +26,7 @@ System.create(
 
 KenpoGrade.destroy_all
 CSV.foreach('db/kenpo_grade.csv') do |row|
-  KenpoGrade.create(:grade => row[0], :over => row[1], :under => row[2], :base_monthly_salary => row[3], :decision_1_down => [4], :decision_2_down => [5])
+  KenpoGrade.create(:grade => row[0], :over => row[1], :under => row[2], :base_monthly_salary => row[3], :decision_1_down => row[4], :decision_2_down => row[5])
 end
 
 KoseiGrade.destroy_all
