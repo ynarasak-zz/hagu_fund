@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Kenpo Grades</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Grade</th>
+      <th>Over</th>
+      <th>Under</th>
+      <th>Base monthly salary</th>
+      <th>Decision 1 down</th>
+      <th>Decision 2 down</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @kenpo_grades.each do |kenpo_grade| %>
+      <tr>
+        <td><%= kenpo_grade.grade %></td>
+        <td><%= kenpo_grade.over %></td>
+        <td><%= kenpo_grade.under %></td>
+        <td><%= kenpo_grade.base_monthly_salary %></td>
+        <td><%= kenpo_grade.decision_1_down %></td>
+        <td><%= kenpo_grade.decision_2_down %></td>
+        <td><%= link_to 'Show', kenpo_grade %></td>
+        <td><%= link_to 'Edit', edit_kenpo_grade_path(kenpo_grade) %></td>
+        <td><%= link_to 'Destroy', kenpo_grade, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Kenpo Grade', new_kenpo_grade_path %>

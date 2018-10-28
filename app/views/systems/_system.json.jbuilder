@@ -1,0 +1,2 @@
+json.extract! system, :id, :kosei_down_annual_income_multiplication, :resident_tax_level1_limit, :resident_tax_level2_limit, :resident_tax_level2_multiplication, :resident_tax_level2_addition, :resident_tax_level3_limit, :resident_tax_level3_multiplication, :resident_tax_level3_addition, :resident_tax_level4_limit, :resident_tax_level4_multiplication, :resident_tax_level4_addition, :resident_tax_level5_limit, :resident_tax_level5_multiplication, :resident_tax_level5_addition, :created_at, :updated_at
+json.url system_url(system, format: :json)

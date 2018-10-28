@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Grade:</strong>
+  <%= @income_tax.grade %>
+</p>
+
+<p>
+  <strong>Over:</strong>
+  <%= @income_tax.over %>
+</p>
+
+<p>
+  <strong>Under:</strong>
+  <%= @income_tax.under %>
+</p>
+
+<p>
+  <strong>Tax:</strong>
+  <%= @income_tax.tax %>
+</p>
+
+<%= link_to 'Edit', edit_income_tax_path(@income_tax) %> |
+<%= link_to 'Back', income_taxes_path %>

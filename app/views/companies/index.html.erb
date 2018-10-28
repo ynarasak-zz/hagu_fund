@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Companies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Kenpo charge employee rate</th>
+      <th>Kenpo kaigo rate</th>
+      <th>Kosei rate</th>
+      <th>Kikin charge employee rate</th>
+      <th>Koyou rate</th>
+      <th>Interest rate</th>
+      <th>Monthly base work hour</th>
+      <th>Min instalment</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @companies.each do |company| %>
+      <tr>
+        <td><%= company.name %></td>
+        <td><%= company.kenpo_charge_employee_rate %></td>
+        <td><%= company.kenpo_kaigo_rate %></td>
+        <td><%= company.kosei_rate %></td>
+        <td><%= company.kikin_charge_employee_rate %></td>
+        <td><%= company.koyou_rate %></td>
+        <td><%= company.interest_rate %></td>
+        <td><%= company.monthly_base_work_hour %></td>
+        <td><%= company.min_instalment %></td>
+        <td><%= link_to 'Show', company %></td>
+        <td><%= link_to 'Edit', edit_company_path(company) %></td>
+        <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Company', new_company_path %>

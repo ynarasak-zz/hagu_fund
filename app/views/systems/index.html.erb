@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Systems</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Kosei down annual income multiplication</th>
+      <th>Resident tax level1 limit</th>
+      <th>Resident tax level2 limit</th>
+      <th>Resident tax level2 multiplication</th>
+      <th>Resident tax level2 addition</th>
+      <th>Resident tax level3 limit</th>
+      <th>Resident tax level3 multiplication</th>
+      <th>Resident tax level3 addition</th>
+      <th>Resident tax level4 limit</th>
+      <th>Resident tax level4 multiplication</th>
+      <th>Resident tax level4 addition</th>
+      <th>Resident tax level5 limit</th>
+      <th>Resident tax level5 multiplication</th>
+      <th>Resident tax level5 addition</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @systems.each do |system| %>
+      <tr>
+        <td><%= system.kosei_down_annual_income_multiplication %></td>
+        <td><%= system.resident_tax_level1_limit %></td>
+        <td><%= system.resident_tax_level2_limit %></td>
+        <td><%= system.resident_tax_level2_multiplication %></td>
+        <td><%= system.resident_tax_level2_addition %></td>
+        <td><%= system.resident_tax_level3_limit %></td>
+        <td><%= system.resident_tax_level3_multiplication %></td>
+        <td><%= system.resident_tax_level3_addition %></td>
+        <td><%= system.resident_tax_level4_limit %></td>
+        <td><%= system.resident_tax_level4_multiplication %></td>
+        <td><%= system.resident_tax_level4_addition %></td>
+        <td><%= system.resident_tax_level5_limit %></td>
+        <td><%= system.resident_tax_level5_multiplication %></td>
+        <td><%= system.resident_tax_level5_addition %></td>
+        <td><%= link_to 'Show', system %></td>
+        <td><%= link_to 'Edit', edit_system_path(system) %></td>
+        <td><%= link_to 'Destroy', system, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New System', new_system_path %>

@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  kenpo_charge_employee_rate: 1.5
+  kenpo_kaigo_rate: 1.5
+  kosei_rate: 1.5
+  kikin_charge_employee_rate: 1.5
+  koyou_rate: 1.5
+  interest_rate: 1.5
+  monthly_base_work_hour: 1.5
+  min_instalment: 1
+
+two:
+  name: MyString
+  kenpo_charge_employee_rate: 1.5
+  kenpo_kaigo_rate: 1.5
+  kosei_rate: 1.5
+  kikin_charge_employee_rate: 1.5
+  koyou_rate: 1.5
+  interest_rate: 1.5
+  monthly_base_work_hour: 1.5
+  min_instalment: 1

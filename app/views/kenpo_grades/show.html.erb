@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Grade:</strong>
+  <%= @kenpo_grade.grade %>
+</p>
+
+<p>
+  <strong>Over:</strong>
+  <%= @kenpo_grade.over %>
+</p>
+
+<p>
+  <strong>Under:</strong>
+  <%= @kenpo_grade.under %>
+</p>
+
+<p>
+  <strong>Base monthly salary:</strong>
+  <%= @kenpo_grade.base_monthly_salary %>
+</p>
+
+<p>
+  <strong>Decision 1 down:</strong>
+  <%= @kenpo_grade.decision_1_down %>
+</p>
+
+<p>
+  <strong>Decision 2 down:</strong>
+  <%= @kenpo_grade.decision_2_down %>
+</p>
+
+<%= link_to 'Edit', edit_kenpo_grade_path(@kenpo_grade) %> |
+<%= link_to 'Back', kenpo_grades_path %>

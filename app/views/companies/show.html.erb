@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @company.name %>
+</p>
+
+<p>
+  <strong>Kenpo charge employee rate:</strong>
+  <%= @company.kenpo_charge_employee_rate %>
+</p>
+
+<p>
+  <strong>Kenpo kaigo rate:</strong>
+  <%= @company.kenpo_kaigo_rate %>
+</p>
+
+<p>
+  <strong>Kosei rate:</strong>
+  <%= @company.kosei_rate %>
+</p>
+
+<p>
+  <strong>Kikin charge employee rate:</strong>
+  <%= @company.kikin_charge_employee_rate %>
+</p>
+
+<p>
+  <strong>Koyou rate:</strong>
+  <%= @company.koyou_rate %>
+</p>
+
+<p>
+  <strong>Interest rate:</strong>
+  <%= @company.interest_rate %>
+</p>
+
+<p>
+  <strong>Monthly base work hour:</strong>
+  <%= @company.monthly_base_work_hour %>
+</p>
+
+<p>
+  <strong>Min instalment:</strong>
+  <%= @company.min_instalment %>
+</p>
+
+<%= link_to 'Edit', edit_company_path(@company) %> |
+<%= link_to 'Back', companies_path %>

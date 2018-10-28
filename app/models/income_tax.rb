@@ -1,0 +1,2 @@
+class IncomeTax < ApplicationRecord
+end

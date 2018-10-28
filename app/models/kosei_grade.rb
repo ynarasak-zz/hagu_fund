@@ -1,0 +1,2 @@
+class KoseiGrade < ApplicationRecord
+end

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Grade:</strong>
+  <%= @kosei_grade.grade %>
+</p>
+
+<p>
+  <strong>Lower limit:</strong>
+  <%= @kosei_grade.lower_limit %>
+</p>
+
+<p>
+  <strong>Base monthly salary:</strong>
+  <%= @kosei_grade.base_monthly_salary %>
+</p>
+
+<%= link_to 'Edit', edit_kosei_grade_path(@kosei_grade) %> |
+<%= link_to 'Back', kosei_grades_path %>

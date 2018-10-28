@@ -1,0 +1,2 @@
+class KenpoGrade < ApplicationRecord
+end

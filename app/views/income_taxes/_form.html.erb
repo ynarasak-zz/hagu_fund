@@ -1,0 +1,37 @@
+<%= form_with(model: income_tax, local: true) do |form| %>
+  <% if income_tax.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(income_tax.errors.count, "error") %> prohibited this income_tax from being saved:</h2>
+
+      <ul>
+      <% income_tax.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :grade %>
+    <%= form.number_field :grade %>
+  </div>
+
+  <div class="field">
+    <%= form.label :over %>
+    <%= form.number_field :over %>
+  </div>
+
+  <div class="field">
+    <%= form.label :under %>
+    <%= form.number_field :under %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tax %>
+    <%= form.number_field :tax %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

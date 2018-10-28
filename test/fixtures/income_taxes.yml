@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  grade: 1
+  over: 1
+  under: 1
+  tax: 1
+
+two:
+  grade: 1
+  over: 1
+  under: 1
+  tax: 1

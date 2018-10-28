@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  grade: 1
+  over: 1
+  under: 1
+  base_monthly_salary: 1
+  decision_1_down: 1
+  decision_2_down: 1
+
+two:
+  grade: 1
+  over: 1
+  under: 1
+  base_monthly_salary: 1
+  decision_1_down: 1
+  decision_2_down: 1

@@ -1,0 +1,47 @@
+<%= form_with(model: kenpo_grade, local: true) do |form| %>
+  <% if kenpo_grade.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(kenpo_grade.errors.count, "error") %> prohibited this kenpo_grade from being saved:</h2>
+
+      <ul>
+      <% kenpo_grade.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :grade %>
+    <%= form.number_field :grade %>
+  </div>
+
+  <div class="field">
+    <%= form.label :over %>
+    <%= form.number_field :over %>
+  </div>
+
+  <div class="field">
+    <%= form.label :under %>
+    <%= form.number_field :under %>
+  </div>
+
+  <div class="field">
+    <%= form.label :base_monthly_salary %>
+    <%= form.number_field :base_monthly_salary %>
+  </div>
+
+  <div class="field">
+    <%= form.label :decision_1_down %>
+    <%= form.number_field :decision_1_down %>
+  </div>
+
+  <div class="field">
+    <%= form.label :decision_2_down %>
+    <%= form.number_field :decision_2_down %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

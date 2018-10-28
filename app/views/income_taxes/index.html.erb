@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Income Taxes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Grade</th>
+      <th>Over</th>
+      <th>Under</th>
+      <th>Tax</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @income_taxes.each do |income_tax| %>
+      <tr>
+        <td><%= income_tax.grade %></td>
+        <td><%= income_tax.over %></td>
+        <td><%= income_tax.under %></td>
+        <td><%= income_tax.tax %></td>
+        <td><%= link_to 'Show', income_tax %></td>
+        <td><%= link_to 'Edit', edit_income_tax_path(income_tax) %></td>
+        <td><%= link_to 'Destroy', income_tax, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Income Tax', new_income_tax_path %>

@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  kosei_down_annual_income_multiplication: 1.5
+  resident_tax_level1_limit: 1
+  resident_tax_level2_limit: 1
+  resident_tax_level2_multiplication: 9.99
+  resident_tax_level2_addition: 1
+  resident_tax_level3_limit: 1
+  resident_tax_level3_multiplication: 9.99
+  resident_tax_level3_addition: 1
+  resident_tax_level4_limit: 1
+  resident_tax_level4_multiplication: 9.99
+  resident_tax_level4_addition: 1
+  resident_tax_level5_limit: 1
+  resident_tax_level5_multiplication: 9.99
+  resident_tax_level5_addition: 1
+
+two:
+  kosei_down_annual_income_multiplication: 1.5
+  resident_tax_level1_limit: 1
+  resident_tax_level2_limit: 1
+  resident_tax_level2_multiplication: 9.99
+  resident_tax_level2_addition: 1
+  resident_tax_level3_limit: 1
+  resident_tax_level3_multiplication: 9.99
+  resident_tax_level3_addition: 1
+  resident_tax_level4_limit: 1
+  resident_tax_level4_multiplication: 9.99
+  resident_tax_level4_addition: 1
+  resident_tax_level5_limit: 1
+  resident_tax_level5_multiplication: 9.99
+  resident_tax_level5_addition: 1

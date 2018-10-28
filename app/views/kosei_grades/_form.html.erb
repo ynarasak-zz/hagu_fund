@@ -1,0 +1,32 @@
+<%= form_with(model: kosei_grade, local: true) do |form| %>
+  <% if kosei_grade.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(kosei_grade.errors.count, "error") %> prohibited this kosei_grade from being saved:</h2>
+
+      <ul>
+      <% kosei_grade.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :grade %>
+    <%= form.number_field :grade %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lower_limit %>
+    <%= form.number_field :lower_limit %>
+  </div>
+
+  <div class="field">
+    <%= form.label :base_monthly_salary %>
+    <%= form.number_field :base_monthly_salary %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
