@@ -1,0 +1,99 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @estimate.type %>
+</p>
+
+<p>
+  <strong>Target year:</strong>
+  <%= @estimate.target_year %>
+</p>
+
+<p>
+  <strong>Kenpo grade:</strong>
+  <%= @estimate.kenpo_grade %>
+</p>
+
+<p>
+  <strong>Kenpo price:</strong>
+  <%= @estimate.kenpo_price %>
+</p>
+
+<p>
+  <strong>Kaigo price:</strong>
+  <%= @estimate.kaigo_price %>
+</p>
+
+<p>
+  <strong>Kosei grade:</strong>
+  <%= @estimate.kosei_grade %>
+</p>
+
+<p>
+  <strong>Kosei price:</strong>
+  <%= @estimate.kosei_price %>
+</p>
+
+<p>
+  <strong>Kikin price:</strong>
+  <%= @estimate.kikin_price %>
+</p>
+
+<p>
+  <strong>Koyou price:</strong>
+  <%= @estimate.koyou_price %>
+</p>
+
+<p>
+  <strong>Syaho koujyo:</strong>
+  <%= @estimate.syaho_koujyo %>
+</p>
+
+<p>
+  <strong>Tax target price:</strong>
+  <%= @estimate.tax_target_price %>
+</p>
+
+<p>
+  <strong>Income tax:</strong>
+  <%= @estimate.income_tax %>
+</p>
+
+<p>
+  <strong>Resident tax:</strong>
+  <%= @estimate.resident_tax %>
+</p>
+
+<p>
+  <strong>Sum tax:</strong>
+  <%= @estimate.sum_tax %>
+</p>
+
+<p>
+  <strong>Lower limit fee:</strong>
+  <%= @estimate.lower_limit_fee %>
+</p>
+
+<p>
+  <strong>Instalment:</strong>
+  <%= @estimate.instalment %>
+</p>
+
+<p>
+  <strong>New salary:</strong>
+  <%= @estimate.new_salary %>
+</p>
+
+<p>
+  <strong>Tax economy result:</strong>
+  <%= @estimate.tax_economy_result %>
+</p>
+
+<p>
+  <strong>Kosei down annual income:</strong>
+  <%= @estimate.kosei_down_annual_income %>
+</p>
+
+<%= link_to 'Edit', edit_estimate_path(@estimate) %> |
+<%= link_to 'Back', estimates_path %>

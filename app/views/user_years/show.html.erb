@@ -1,59 +1,59 @@
 <p id="notice"><%= notice %></p>
+<p>
+  <strong>対象年:</strong>
+  <%= @user_year.target_year %>
+</p>
 
 <p>
-  <strong>April salary:</strong>
+  <strong>４月の総支給額:</strong>
   <%= @user_year.april_salary %>
 </p>
 
 <p>
-  <strong>May salary:</strong>
+  <strong>５月の総支給額:</strong>
   <%= @user_year.may_salary %>
 </p>
 
 <p>
-  <strong>June salary:</strong>
+  <strong>６月の総支給額:</strong>
   <%= @user_year.june_salary %>
 </p>
 
 <p>
-  <strong>Nearest min salary:</strong>
+  <strong>直近一ヶ月での最低賃金対象給与額:</strong>
   <%= @user_year.nearest_min_salary %>
 </p>
 
 <p>
-  <strong>Estimate age base date:</strong>
+  <strong>年齢算出基準日:</strong>
   <%= @user_year.estimate_age_base_date %>
 </p>
 
 <p>
-  <strong>Age:</strong>
+  <strong>年齢:</strong>
   <%= @user_year.age %>
 </p>
 
 <p>
-  <strong>Average salary:</strong>
+  <strong>平均報酬月額:</strong>
   <%= @user_year.average_salary %>
 </p>
 
 <p>
-  <strong>Min instalment</strong>
+  <strong>最賃掛金:</strong>
   <%= @user_year.min_instalment %>
 </p>
 
 <p>
-  <strong>Sum salary 20percent:</strong>
+  <strong>総支給額20%:</strong>
   <%= @user_year.sum_salary_20percent %>
 </p>
 
 <p>
-  <strong>Max instalment:</strong>
+  <strong>上限掛金:</strong>
   <%= @user_year.max_instalment %>
 </p>
 
-<p>
-  <strong>Target year:</strong>
-  <%= @user_year.target_year %>
-</p>
 
 <%= link_to 'Edit', edit_user_year_path(@user_year) %> |
 <%= link_to 'Back', user_years_path %>

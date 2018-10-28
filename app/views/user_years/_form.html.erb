@@ -13,17 +13,17 @@
   <%= form.select :users_id, User.all.map{|c| [c.name, c.id]} %>
   <div class="field">
     <%# form.label :april_salary %>４月の総支給額
-    <%= form.number_field :april_salary %>
+    <%= form.number_field :april_salary, value: '0' %>
   </div>
 
   <div class="field">
     <%# form.label :may_salary %>５月の総支給額
-    <%= form.number_field :may_salary %>
+    <%= form.number_field :may_salary, value: '0' %>
   </div>
 
   <div class="field">
     <%# form.label :june_salary %>６月の総支給額
-    <%= form.number_field :june_salary %>
+    <%= form.number_field :june_salary, value: '0' %>
   </div>
 
   <div class="field">

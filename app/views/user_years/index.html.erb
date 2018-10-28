@@ -39,16 +39,16 @@
     <% @user_years.each do |user_year| %>
       <tr>
         <td><%= user_year.target_year %></td>
-        <td><%= user_year.april_salary %></td>
-        <td><%= user_year.may_salary %></td>
-        <td><%= user_year.june_salary %></td>
-        <td><%= user_year.nearest_min_salary %></td>
+        <td><%= number_to_currency(user_year.april_salary, :unit => "￥", :precision => 0) %></td>
+        <td><%= number_to_currency(user_year.may_salary, :unit => "￥", :precision => 0) %></td>
+        <td><%= number_to_currency(user_year.june_salary, :unit => "￥", :precision => 0) %></td>
+        <td><%= number_to_currency(user_year.nearest_min_salary, :unit => "￥", :precision => 0) %></td>
         <td><%= user_year.estimate_age_base_date %></td>
         <td><%= user_year.age %></td>
-        <td><%= user_year.average_salary %></td>
-        <td><%= user_year.min_instalment %></td>
-        <td><%= user_year.sum_salary_20percent %></td>
-        <td><%= user_year.max_instalment %></td>
+        <td><%= number_to_currency(user_year.average_salary, :unit => "￥", :precision => 0) %></td>
+        <td><%= number_to_currency(user_year.min_instalment, :unit => "￥", :precision => 0) %></td>
+        <td><%= number_to_currency(user_year.sum_salary_20percent, :unit => "￥", :precision => 0) %></td>
+        <td><%= number_to_currency(user_year.max_instalment, :unit => "￥", :precision => 0) %></td>
         <td><%= link_to 'Show', user_year %></td>
         <td><%= link_to 'Edit', edit_user_year_path(user_year) %></td>
         <td><%= link_to 'Destroy', user_year, method: :delete, data: { confirm: 'Are you sure?' } %></td>

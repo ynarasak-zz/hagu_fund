@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_28_101153) do
+ActiveRecord::Schema.define(version: 2018_10_28_131810) do
 
   create_table "companies", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
@@ -24,6 +24,32 @@ ActiveRecord::Schema.define(version: 2018_10_28_101153) do
     t.integer "min_instalment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "estimates", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "users_id"
+    t.string "estimate_type"
+    t.integer "target_year"
+    t.integer "kenpo_grade"
+    t.decimal "kenpo_price", precision: 10
+    t.decimal "kaigo_price", precision: 10
+    t.integer "kosei_grade"
+    t.decimal "kosei_price", precision: 10
+    t.decimal "kikin_price", precision: 10
+    t.decimal "koyou_price", precision: 10
+    t.decimal "syaho_koujyo", precision: 10
+    t.decimal "tax_target_price", precision: 10
+    t.decimal "income_tax", precision: 10
+    t.decimal "resident_tax", precision: 10
+    t.decimal "sum_tax", precision: 10
+    t.decimal "lower_limit_fee", precision: 10
+    t.decimal "instalment", precision: 10
+    t.decimal "new_salary", precision: 10
+    t.decimal "tax_economy_result", precision: 10
+    t.decimal "kosei_down_annual_income", precision: 10
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["users_id"], name: "index_estimates_on_users_id"
   end
 
   create_table "income_taxes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

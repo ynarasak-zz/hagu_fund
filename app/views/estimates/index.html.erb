@@ -1,0 +1,58 @@
+<p id="notice"><%= notice %></p>
+
+<h1>シミュレーション結果</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>PLAN</th>
+      <th>見積年度</th>
+      <th>健康保険等級</th>
+      <th>健康保険料</th>
+      <th>介護保険料</th>
+      <th>厚生年金等級</th>
+      <th>厚生年金保険料</th>
+      <th>基金保険料</th>
+      <th>雇用保険料</th>
+      <th>社会保険料控除</th>
+      <th>課税対象所得</th>
+      <th>所得税</th>
+      <th>住民税</th>
+      <th>税金合計</th>
+      <th>報酬下限</th>
+      <th>必要な掛金</th>
+      <th>新報酬月額</th>
+      <th>節税効果</th>
+      <th>厚生年金受給節減額(年)</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @estimates.each do |estimate| %>
+      <tr>
+        <td><%= estimate.estimate_type %></td>
+        <td><%= estimate.target_year %></td>
+        <td><%= estimate.kenpo_grade %></td>
+        <td><%= number_to_currency(estimate.kenpo_price, :unit => "￥", :precision => 0) %></td>
+        <td><%= number_to_currency(estimate.kaigo_price, :unit => "￥", :precision => 0) %></td>
+        <td><%= estimate.kosei_grade %></td>
+        <td><%= number_to_currency(estimate.kosei_price, :unit => "￥", :precision => 0) %></td>
+        <td><%= number_to_currency(estimate.kikin_price, :unit => "￥", :precision => 0) %></td>
+        <td><%= number_to_currency(estimate.koyou_price, :unit => "￥", :precision => 0) %></td>
+        <td><%= number_to_currency(estimate.syaho_koujyo, :unit => "￥", :precision => 0) %></td>
+        <td><%= number_to_currency(estimate.tax_target_price, :unit => "￥", :precision => 0) %></td>
+        <td><%= number_to_currency(estimate.income_tax, :unit => "￥", :precision => 0) %></td>
+        <td><%= number_to_currency(estimate.resident_tax, :unit => "￥", :precision => 0) %></td>
+        <td><%= number_to_currency(estimate.sum_tax, :unit => "￥", :precision => 0) %></td>
+        <td><%= number_to_currency(estimate.lower_limit_fee, :unit => "￥", :precision => 0) %></td>
+        <td><%= number_to_currency(estimate.instalment, :unit => "￥", :precision => 0) %></td>
+        <td><%= number_to_currency(estimate.new_salary, :unit => "￥", :precision => 0) %></td>
+        <td><%= number_to_currency(estimate.tax_economy_result, :unit => "￥", :precision => 0) %></td>
+        <td><%= number_to_currency(estimate.kosei_down_annual_income, :unit => "￥", :precision => 0) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+

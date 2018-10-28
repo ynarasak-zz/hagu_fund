@@ -1,0 +1,112 @@
+<%= form_with(model: estimate, local: true) do |form| %>
+  <% if estimate.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(estimate.errors.count, "error") %> prohibited this estimate from being saved:</h2>
+
+      <ul>
+      <% estimate.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :type %>
+    <%= form.text_field :type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :target_year %>
+    <%= form.number_field :target_year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :kenpo_grade %>
+    <%= form.number_field :kenpo_grade %>
+  </div>
+
+  <div class="field">
+    <%= form.label :kenpo_price %>
+    <%= form.text_field :kenpo_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :kaigo_price %>
+    <%= form.text_field :kaigo_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :kosei_grade %>
+    <%= form.number_field :kosei_grade %>
+  </div>
+
+  <div class="field">
+    <%= form.label :kosei_price %>
+    <%= form.text_field :kosei_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :kikin_price %>
+    <%= form.text_field :kikin_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :koyou_price %>
+    <%= form.text_field :koyou_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :syaho_koujyo %>
+    <%= form.text_field :syaho_koujyo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tax_target_price %>
+    <%= form.text_field :tax_target_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :income_tax %>
+    <%= form.text_field :income_tax %>
+  </div>
+
+  <div class="field">
+    <%= form.label :resident_tax %>
+    <%= form.text_field :resident_tax %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sum_tax %>
+    <%= form.text_field :sum_tax %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lower_limit_fee %>
+    <%= form.text_field :lower_limit_fee %>
+  </div>
+
+  <div class="field">
+    <%= form.label :instalment %>
+    <%= form.text_field :instalment %>
+  </div>
+
+  <div class="field">
+    <%= form.label :new_salary %>
+    <%= form.text_field :new_salary %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tax_economy_result %>
+    <%= form.text_field :tax_economy_result %>
+  </div>
+
+  <div class="field">
+    <%= form.label :kosei_down_annual_income %>
+    <%= form.text_field :kosei_down_annual_income %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

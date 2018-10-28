@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :estimates
   resources :user_years
   resources :users
   resources :income_taxes

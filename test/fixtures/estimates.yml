@@ -1,0 +1,43 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: 
+  target_year: 1
+  kenpo_grade: 1
+  kenpo_price: 9.99
+  kaigo_price: 9.99
+  kosei_grade: 1
+  kosei_price: 9.99
+  kikin_price: 9.99
+  koyou_price: 9.99
+  syaho_koujyo: 9.99
+  tax_target_price: 9.99
+  income_tax: 9.99
+  resident_tax: 9.99
+  sum_tax: 9.99
+  lower_limit_fee: 9.99
+  instalment: 9.99
+  new_salary: 9.99
+  tax_economy_result: 9.99
+  kosei_down_annual_income: 9.99
+
+two:
+  type: 
+  target_year: 1
+  kenpo_grade: 1
+  kenpo_price: 9.99
+  kaigo_price: 9.99
+  kosei_grade: 1
+  kosei_price: 9.99
+  kikin_price: 9.99
+  koyou_price: 9.99
+  syaho_koujyo: 9.99
+  tax_target_price: 9.99
+  income_tax: 9.99
+  resident_tax: 9.99
+  sum_tax: 9.99
+  lower_limit_fee: 9.99
+  instalment: 9.99
+  new_salary: 9.99
+  tax_economy_result: 9.99
+  kosei_down_annual_income: 9.99
