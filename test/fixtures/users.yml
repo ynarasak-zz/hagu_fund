@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  'no': 1
+  code: MyString
+  organization: MyString
+  name: MyString
+  birthday: 2018-10-28
+  created_at: 2018-10-28 14:45:29
+  updated_at: 2018-10-28 14:45:29
+
+two:
+  'no': 1
+  code: MyString
+  organization: MyString
+  name: MyString
+  birthday: 2018-10-28
+  created_at: 2018-10-28 14:45:29
+  updated_at: 2018-10-28 14:45:29

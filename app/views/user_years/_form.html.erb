@@ -1,0 +1,72 @@
+<%= form_with(model: user_year, local: true) do |form| %>
+  <% if user_year.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user_year.errors.count, "error") %> prohibited this user_year from being saved:</h2>
+
+      <ul>
+      <% user_year.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <%= form.select :users_id, User.all.map{|c| [c.name, c.id]} %>
+  <div class="field">
+    <%= form.label :april_salary %>
+    <%= form.number_field :april_salary %>
+  </div>
+
+  <div class="field">
+    <%= form.label :may_salary %>
+    <%= form.number_field :may_salary %>
+  </div>
+
+  <div class="field">
+    <%= form.label :june_salary %>
+    <%= form.number_field :june_salary %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nearest_min_salary %>
+    <%= form.number_field :nearest_min_salary %>
+  </div>
+
+  <div class="field">
+    <%= form.label :estimate_age_base_date %>
+    <%= form.date_select :estimate_age_base_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :age %>
+    <%= form.number_field :age %>
+  </div>
+
+  <div class="field">
+    <%= form.label :average_salary %>
+    <%= form.text_field :average_salary %>
+  </div>
+
+  <div class="field">
+    <%= form.label :min_instalment %>
+    <%= form.number_field :min_instalment %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sum_salary_10percent %>
+    <%= form.text_field :sum_salary_10percent %>
+  </div>
+
+  <div class="field">
+    <%= form.label :max_instalment %>
+    <%= form.text_field :max_instalment %>
+  </div>
+
+  <div class="field">
+    <%= form.label :target_year %>
+    <%= form.text_field :target_year %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

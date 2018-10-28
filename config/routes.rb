@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :user_years
+  resources :users
   resources :income_taxes
   resources :kosei_grades
   resources :kenpo_grades

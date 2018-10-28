@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>April salary:</strong>
+  <%= @user_year.april_salary %>
+</p>
+
+<p>
+  <strong>May salary:</strong>
+  <%= @user_year.may_salary %>
+</p>
+
+<p>
+  <strong>June salary:</strong>
+  <%= @user_year.june_salary %>
+</p>
+
+<p>
+  <strong>Nearest min salary:</strong>
+  <%= @user_year.nearest_min_salary %>
+</p>
+
+<p>
+  <strong>Estimate age base date:</strong>
+  <%= @user_year.estimate_age_base_date %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @user_year.age %>
+</p>
+
+<p>
+  <strong>Average salary:</strong>
+  <%= @user_year.average_salary %>
+</p>
+
+<p>
+  <strong>Min instalment</strong>
+  <%= @user_year.min_instalment %>
+</p>
+
+<p>
+  <strong>Sum salary 10percent:</strong>
+  <%= @user_year.sum_salary_10percent %>
+</p>
+
+<p>
+  <strong>Max instalment:</strong>
+  <%= @user_year.max_instalment %>
+</p>
+
+<p>
+  <strong>Target year:</strong>
+  <%= @user_year.target_year %>
+</p>
+
+<%= link_to 'Edit', edit_user_year_path(@user_year) %> |
+<%= link_to 'Back', user_years_path %>

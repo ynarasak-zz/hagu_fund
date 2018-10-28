@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_28_052738) do
+ActiveRecord::Schema.define(version: 2018_10_28_060005) do
 
   create_table "companies", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
@@ -71,6 +71,36 @@ ActiveRecord::Schema.define(version: 2018_10_28_052738) do
     t.integer "resident_tax_level5_addition"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "user_years", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "users_id"
+    t.integer "april_salary"
+    t.integer "may_salary"
+    t.integer "june_salary"
+    t.integer "nearest_min_salary"
+    t.date "estimate_age_base_date"
+    t.integer "age"
+    t.decimal "average_salary", precision: 10
+    t.integer "min_instalment"
+    t.decimal "sum_salary_10percent", precision: 10
+    t.decimal "max_instalment", precision: 10
+    t.integer "target_year"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["users_id"], name: "index_user_years_on_users_id"
+  end
+
+  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "companies_id"
+    t.integer "no"
+    t.string "code"
+    t.string "organization"
+    t.string "name"
+    t.date "birthday"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["companies_id"], name: "index_users_on_companies_id"
   end
 
 end

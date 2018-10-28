@@ -1,0 +1,2 @@
+class UserYear < ApplicationRecord
+end
