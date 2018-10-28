@@ -8,8 +8,8 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <%= link_to '会社' , {controller: :companies, action: :index} , id: :link, class: 'dropdown-item' %>
-          <%= link_to '社員' , {controller: :users, action: :index} , id: :link, class: 'dropdown-item' %>
-          <%= link_to '社員詳細' , {controller: :user_years, action: :index} , id: :link, class: 'dropdown-item' %>
+          <%= link_to '全社員' , {controller: :users, action: :index} , id: :link, class: 'dropdown-item' %>
+          <%= link_to '全社員詳細' , {controller: :user_years, action: :index} , id: :link, class: 'dropdown-item' %>
           <div class="dropdown-divider"></div>
           <%= link_to 'システム' , {controller: :systems, action: :index} , id: :link, class: 'dropdown-item' %>
           <%= link_to '所得税マスタ' , {controller: :income_taxes, action: :index} , id: :link, class: 'dropdown-item' %>

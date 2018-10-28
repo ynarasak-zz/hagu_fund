@@ -8,10 +8,6 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <%= link_to '会社' , {controller: :companies, action: :index} , id: :link, class: 'dropdown-item' %>
-          <%= link_to '社員' , {controller: :users, action: :index} , id: :link, class: 'dropdown-item' %>
-          <%= link_to '社員詳細' , {controller: :user_years, action: :index} , id: :link, class: 'dropdown-item' %>
-          <div class="dropdown-divider"></div>
-          <%= link_to 'システム' , {controller: :systems, action: :index} , id: :link, class: 'dropdown-item' %>
         </div>
       </li>
     </ul>
@@ -19,7 +15,7 @@
 </nav>
 <p id="notice"><%= notice %></p>
 
-<h1>Users</h1>
+<h1><% unless @company.blank? %><%= @company.name %> の社員一覧<%else %>全社員一覧<% end %></h1>
 
 <table class="table table-striped">
   <thead>

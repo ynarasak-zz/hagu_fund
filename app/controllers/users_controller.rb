@@ -4,7 +4,13 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.all
+    companies_id = params[:companies_id]
+    if companies_id.blank?
+      @users = User.all
+    else
+      @users = User.where(companies_id: companies_id)
+      @company = Company.find(companies_id)
+    end
   end
 
   # GET /users/1

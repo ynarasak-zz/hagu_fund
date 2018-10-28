@@ -12,58 +12,58 @@
   <% end %>
   <%= form.select :users_id, User.all.map{|c| [c.name, c.id]} %>
   <div class="field">
-    <%= form.label :april_salary %>
+    <%# form.label :april_salary %>４月の総支給額
     <%= form.number_field :april_salary %>
   </div>
 
   <div class="field">
-    <%= form.label :may_salary %>
+    <%# form.label :may_salary %>５月の総支給額
     <%= form.number_field :may_salary %>
   </div>
 
   <div class="field">
-    <%= form.label :june_salary %>
+    <%# form.label :june_salary %>６月の総支給額
     <%= form.number_field :june_salary %>
   </div>
 
   <div class="field">
-    <%= form.label :nearest_min_salary %>
+    <%# form.label :nearest_min_salary %>直近一ヶ月での最低賃金対象給与額
     <%= form.number_field :nearest_min_salary %>
   </div>
 
   <div class="field">
-    <%= form.label :estimate_age_base_date %>
-    <%= form.date_select :estimate_age_base_date %>
+    <%# form.label :estimate_age_base_date %>
+    <%# form.date_select :estimate_age_base_date %>
   </div>
 
   <div class="field">
-    <%= form.label :age %>
-    <%= form.number_field :age %>
+    <%# form.label :age %>
+    <%# form.number_field :age %>
   </div>
 
   <div class="field">
-    <%= form.label :average_salary %>
-    <%= form.text_field :average_salary %>
+    <%# form.label :average_salary %>
+    <%# form.text_field :average_salary %>
   </div>
 
   <div class="field">
-    <%= form.label :min_instalment %>
-    <%= form.number_field :min_instalment %>
+    <%# form.label :min_instalment %>
+    <%# form.number_field :min_instalment %>
   </div>
 
   <div class="field">
-    <%= form.label :sum_salary_10percent %>
-    <%= form.text_field :sum_salary_10percent %>
+    <%# form.label :sum_salary_20percent %>
+    <%# form.text_field :sum_salary_20percent %>
   </div>
 
   <div class="field">
-    <%= form.label :max_instalment %>
-    <%= form.text_field :max_instalment %>
+    <%# form.label :max_instalment %>
+    <%# form.text_field :max_instalment %>
   </div>
 
   <div class="field">
     <%= form.label :target_year %>
-    <%= form.text_field :target_year %>
+    <%= form.text_field :target_year, value: '2018' %>
   </div>
 
   <div class="actions">

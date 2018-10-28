@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_28_060005) do
+ActiveRecord::Schema.define(version: 2018_10_28_101153) do
 
   create_table "companies", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
@@ -83,7 +83,7 @@ ActiveRecord::Schema.define(version: 2018_10_28_060005) do
     t.integer "age"
     t.decimal "average_salary", precision: 10
     t.integer "min_instalment"
-    t.decimal "sum_salary_10percent", precision: 10
+    t.decimal "sum_salary_20percent", precision: 10
     t.decimal "max_instalment", precision: 10
     t.integer "target_year"
     t.datetime "created_at", null: false

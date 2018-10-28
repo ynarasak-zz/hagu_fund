@@ -8,10 +8,6 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <%= link_to '会社' , {controller: :companies, action: :index} , id: :link, class: 'dropdown-item' %>
-          <%= link_to '社員' , {controller: :users, action: :index} , id: :link, class: 'dropdown-item' %>
-          <%= link_to '社員詳細' , {controller: :user_years, action: :index} , id: :link, class: 'dropdown-item' %>
-          <div class="dropdown-divider"></div>
-          <%= link_to 'システム' , {controller: :systems, action: :index} , id: :link, class: 'dropdown-item' %>
         </div>
       </li>
     </ul>
@@ -19,22 +15,22 @@
 </nav>
 <p id="notice"><%= notice %></p>
 
-<h1>User Years</h1>
+<h1><% unless @target_year.blank? %> <%= @target_year %>年見積 <%= @user.name %> <% else %> 全社員 <% end %></h1>
 
 <table class="table table-striped">
   <thead>
     <tr>
-      <th>April salary</th>
-      <th>May salary</th>
-      <th>June salary</th>
-      <th>Nearest min salary</th>
-      <th>Estimate age base date</th>
-      <th>Age</th>
-      <th>Average salary</th>
-      <th>Min instalment</th>
-      <th>Sum salary 10percent</th>
-      <th>Max instalment</th>
-      <th>Target year</th>
+      <th>対象年</th>
+      <th>４月の総支給額</th>
+      <th>５月の総支給額</th>
+      <th>６月の総支給額</th>
+      <th>直近一ヶ月での最低賃金対象給与額</th>
+      <th>年齢算出基準日</th>
+      <th>年齢</th>
+      <th>平均報酬月額</th>
+      <th>最賃掛金</th>
+      <th>総支給額20%</th>
+      <th>上限掛金</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -42,6 +38,7 @@
   <tbody>
     <% @user_years.each do |user_year| %>
       <tr>
+        <td><%= user_year.target_year %></td>
         <td><%= user_year.april_salary %></td>
         <td><%= user_year.may_salary %></td>
         <td><%= user_year.june_salary %></td>
@@ -50,9 +47,8 @@
         <td><%= user_year.age %></td>
         <td><%= user_year.average_salary %></td>
         <td><%= user_year.min_instalment %></td>
-        <td><%= user_year.sum_salary_10percent %></td>
+        <td><%= user_year.sum_salary_20percent %></td>
         <td><%= user_year.max_instalment %></td>
-        <td><%= user_year.target_year %></td>
         <td><%= link_to 'Show', user_year %></td>
         <td><%= link_to 'Edit', edit_user_year_path(user_year) %></td>
         <td><%= link_to 'Destroy', user_year, method: :delete, data: { confirm: 'Are you sure?' } %></td>
