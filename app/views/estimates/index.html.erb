@@ -9,7 +9,6 @@
       <th>報酬下限</th>
       <th>必要な掛金</th>
       <th>新報酬月額</th>
-      <th>見積年度</th>
       <th>健康保険等級</th>
       <th>健康保険料</th>
       <th>介護保険料</th>
@@ -30,11 +29,19 @@
   <tbody>
     <% @estimates.each do |estimate| %>
       <tr>
-        <td><%= estimate.estimate_type %></td>
+        <td>
+         <% if estimate.estimate_type=='now' %>現在
+         <% elsif estimate.estimate_type=='plan1' %>(PLAN1)たぶん1等級下がる
+         <% elsif estimate.estimate_type=='plan2' %>(PLAN2)確実に1等級下がる
+         <% elsif estimate.estimate_type=='plan3' %>(PLAN3)上限額を拠出する場合
+         <% elsif estimate.estimate_type=='maybe2down' %>たぶん2等級下がる
+         <% elsif estimate.estimate_type=='decision2down' %>確実に2等級下がる
+         <% end %>
+        </td>
         <td><%= number_to_currency(estimate.lower_limit_fee, :unit => "￥", :precision => 0) %></td>
         <td><%= number_to_currency(estimate.instalment, :unit => "￥", :precision => 0) %></td>
         <td><%= number_to_currency(estimate.new_salary, :unit => "￥", :precision => 0) %></td>
-        <td><%= estimate.target_year %></td>
+        <%# estimate.target_year %>
         <td><%= estimate.kenpo_grade %></td>
         <td><%= number_to_currency(estimate.kenpo_price, :unit => "￥", :precision => 0) %></td>
         <td><%= number_to_currency(estimate.kaigo_price, :unit => "￥", :precision => 0) %></td>

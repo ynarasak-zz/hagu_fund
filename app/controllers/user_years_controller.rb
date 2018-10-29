@@ -62,7 +62,7 @@ class UserYearsController < ApplicationController
     
     # CY 最賃掛金
     @user_year.min_instalment = 0
-    unless @user_year.nearest_min_salary.blank?
+    unless @user_year.nearest_min_salary.blank? && @user_year.nearest_min_salary > 0
       work_cy1 = @c.monthly_base_work_hour * @c.min_instalment
       work_cy2 = work_cy1
       if @user_year.nearest_min_salary > work_cy1
@@ -74,7 +74,7 @@ class UserYearsController < ApplicationController
     @user_year.sum_salary_20percent = (@user_year.average_salary * 0.2).floor(-3)
 
     # BE DA 掛金上限 100の位で切り捨て
-    if @user_year.min_instalment < @user_year.sum_salary_20percent
+    if @user_year.min_instalment < @user_year.sum_salary_20percent && @user_year.min_instalment > 0
       @user_year.max_instalment = @user_year.min_instalment.floor(-3)
     else
       @user_year.max_instalment = @user_year.sum_salary_20percent.floor(-3)
@@ -313,8 +313,8 @@ class UserYearsController < ApplicationController
         plan1_grade = Estimate.where(users_id: @user_year.users_id, target_year: @user_year.target_year, estimate_type: 'plan1')[0].kenpo_grade
         lower_base_grade = KenpoGrade.where(grade: plan1_grade)[0]
         saveEstimate @user_year, 'maybe2down', now_grade, @user_year.average_salary, lower_base_grade
-        saveEstimate @user_year, 'plan2', now_grade, @user_year.average_salary, nil
         saveEstimate @user_year, 'plan3', now_grade, @user_year.average_salary, nil
+        saveEstimate @user_year, 'plan2', now_grade, @user_year.average_salary, nil
         saveEstimate @user_year, 'decision2down', now_grade, @user_year.average_salary, nil
 
         format.html { redirect_to @user_year, notice: 'User year was successfully created.' }

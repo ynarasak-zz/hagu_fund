@@ -50,7 +50,7 @@
         <td><%= number_to_currency(user_year.sum_salary_20percent, :unit => "￥", :precision => 0) %></td>
         <td><%= number_to_currency(user_year.max_instalment, :unit => "￥", :precision => 0) %></td>
         <td><%= link_to 'Show', user_year %></td>
-        <td><%= link_to 'Edit', edit_user_year_path(user_year) %></td>
+        <td><%# link_to 'Edit', edit_user_year_path(user_year) %></td>
         <td><%= link_to 'Destroy', user_year, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
