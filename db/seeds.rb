@@ -31,7 +31,7 @@ end
 
 KoseiGrade.destroy_all
 CSV.foreach('db/kosei_grade.csv') do |row|
-  KoseiGrade.create(:grade => row[0], :lower_limit => row[1], :base_monthly_salary => row[2])
+  KoseiGrade.create(:grade => row[0], :base_monthly_salary => row[1], :lower_limit => row[2])
 end
 
 

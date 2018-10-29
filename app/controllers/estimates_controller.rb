@@ -10,6 +10,7 @@ class EstimatesController < ApplicationController
     unless @target_year.blank?
       @estimates = Estimate.where(users_id: users_id, target_year: @target_year)
       @user = User.find(users_id)
+      @companies_id = @user.companies_id
       return
     else
       @estimates = Estimate.all

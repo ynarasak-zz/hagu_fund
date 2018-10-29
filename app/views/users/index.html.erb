@@ -21,12 +21,11 @@
   <thead>
     <tr>
       <th>No</th>
-      <th>Code</th>
-      <th>Organization</th>
-      <th>Name</th>
-      <th>Birthday</th>
-      <th>Created at</th>
-      <th colspan="4"></th>
+      <th>社員番号</th>
+      <th>所属</th>
+      <th>氏名</th>
+      <th>誕生日</th>
+      <th colspan="5"></th>
     </tr>
   </thead>
 
@@ -38,7 +37,8 @@
         <td><%= user.organization %></td>
         <td><%= user.name %></td>
         <td><%= user.birthday %></td>
-        <td><%= user.created_at %></td>
+        <td><%# user.created_at %></td>
+        <td><%= link_to '印刷', controller: "print", action: "index", users_id: user.id, target_year: '2018' %></td>
         <td><%= link_to '2018シミュレーション', controller: "estimates", action: "index", users_id: user.id, target_year: '2018' %></td>
         <td><%= link_to '2018見積', controller: "user_years", action: "index", users_id: user.id, target_year: '2018' %></td>
         <td><%= link_to 'Show', user %></td>

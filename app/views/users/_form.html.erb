@@ -12,38 +12,39 @@
   <% end %>
   <%= form.select :companies_id, Company.all.map{|c| [c.name, c.id]} %>
   <div class="field">
-    <%= form.label :no %>
+    <%= form.label :no %>(*)
     <%= form.number_field :no %>
   </div>
 
   <div class="field">
-    <%= form.label :code %>
+    <%# form.label :code %>社員番号(*)
     <%= form.text_field :code %>
   </div>
 
   <div class="field">
-    <%= form.label :organization %>
+    <%# form.label :organization %>所属(*)
     <%= form.text_field :organization %>
   </div>
 
   <div class="field">
-    <%= form.label :name %>
+    <%# form.label :name %>氏名(*)
     <%= form.text_field :name %>
   </div>
 
   <div class="field">
-    <%= form.label :birthday %>
-    <%= form.date_select :birthday %>
+    <%# form.label :birthday %>誕生日
+    <%# form.date_select :birthday %>
+    <%= form.date_field :birthday, class: "form-control", value: "1990/01/01" %>
   </div>
 
   <div class="field">
-    <%= form.label :created_at %>
-    <%= form.datetime_select :created_at %>
+    <%# form.label :created_at %>
+    <%# form.datetime_select :created_at %>
   </div>
 
   <div class="field">
-    <%= form.label :updated_at %>
-    <%= form.datetime_select :updated_at %>
+    <%# form.label :updated_at %>
+    <%# form.datetime_select :updated_at %>
   </div>
 
   <div class="actions">

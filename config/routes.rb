@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'print/index'
   resources :estimates
   resources :user_years
   resources :users

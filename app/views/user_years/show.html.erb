@@ -56,4 +56,5 @@
 
 
 <%= link_to 'Edit', edit_user_year_path(@user_year) %> |
-<%= link_to 'Back', user_years_path %>
+<%= link_to 'Back', controller: "user_years", action: "index", users_id: @user_year.users_id, target_year: @user_year.target_year %>
+<%= link_to '2018シミュレーション', controller: "estimates", action: "index", users_id: @user_year.users_id, target_year: @user_year.target_year %>

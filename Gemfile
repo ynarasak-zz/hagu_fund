@@ -61,6 +61,9 @@ gem 'mysql2'
 gem 'rails_12factor', group: :production
 gem 'bootstrap', '~> 4.1.3'
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
+gem 'pry-byebug'
+
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
